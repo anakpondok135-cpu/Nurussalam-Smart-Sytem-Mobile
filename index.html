@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Mob Nurussalam</title>
+
+  <!-- IKON RESMI PESANTREN (DIBACA SEMPURNA OLEH CHROME HP) -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9">
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9">
+  
+  <!-- MANIFEST ANDROID PWA -->
+  <link rel="manifest" href='data:application/manifest+json,{"name":"K-Mob Nurussalam","short_name":"K-Mob","start_url":".","display":"standalone","background_color":"#0f271c","theme_color":"#123524","icons":[{"src":"https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9","sizes":"192x192","type":"image/png"},{"src":"https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9","sizes":"512x512","type":"image/png"}]}'>
+
+  <meta name="theme-color" content="#123524">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style>
+    body {
+      background-color: #0f271c;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+    }
+    .loader {
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top: 3px solid #fff;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+
+  <!-- MENGARAHKAN OTOMATIS KE WEB APP GAS KAMU -->
+  <script>
+    // GANTI URL DI BAWAH INI DENGAN LINK /exec GOOGLE APPS SCRIPT KAMU
+    const URL_GAS = "https://script.google.com/macros/s/AKfycbw-P6HQvoG6bVDZB8M9L5LQupjMGQoqDQG9DVvVu0Y/exec";
+    
+    window.location.replace(URL_GAS);
+  </script>
+</head>
+<body>
+  <img src="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9" alt="Logo Nurussalam" class="logo">
+  <div class="loader"></div>
+  <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">Membuka K-Mob Nurussalam...</p>
+</body>
+</html>
