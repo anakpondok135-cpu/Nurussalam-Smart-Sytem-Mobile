@@ -1,0 +1,23 @@
+{
+  "name": "K-Mob Nurussalam",
+  "short_name": "K-Mob",
+  "start_url": "https://anakpondok135-cpu.github.io/Nurussalam-Smart-Sytem-Mobile/",
+  "display": "standalone",
+  "background_color": "#0a1b13",
+  "theme_color": "#123524",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
