@@ -2,63 +2,126 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>K-Mob Nurussalam</title>
 
-  <!-- IKON RESMI PESANTREN (DIBACA OLEH CHROME & SAFARI HP) -->
-  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9">
-  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9">
-  <link rel="apple-touch-icon" sizes="192x192" href="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9">
+  <!-- IKON LOKAL DARI REPOSITORI GITHUB (BEBAS BLOKIR CORS) -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
 
-  <!-- MANIFEST AGAR LOGO MUNCUL DI DIALOG SHORTCUT CHROME -->
-  <link rel="manifest" href='data:application/manifest+json,{"name":"K-Mob Nurussalam","short_name":"K-Mob","start_url":".","display":"standalone","background_color":"#0f271c","theme_color":"#123524","icons":[{"src":"https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9","sizes":"192x192","type":"image/png"},{"src":"https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9","sizes":"512x512","type":"image/png"}]}'>
+  <!-- MANIFEST AGAR CHROME MENAMPILKAN LOGO DI SHORTCUT HP -->
+  <link rel="manifest" href='data:application/manifest+json,{"name":"K-Mob Nurussalam","short_name":"K-Mob","start_url":"https://anakpondok135-cpu.github.io/Nurussalam-Smart-Sytem-Mobile/","display":"standalone","background_color":"#0a1b13","theme_color":"#123524","icons":[{"src":"logo.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"logo.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}'>
 
   <meta name="theme-color" content="#123524">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="K-Mob">
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background-color: #0f271c;
+    * { box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at center, #184731 0%, #0a1b13 100%);
       color: white;
-      font-family: sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      text-align: center;
+      padding: 25px;
     }
-    .logo {
-      width: 90px;
-      height: 90px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .loader {
-      border: 3px solid rgba(255,255,255,0.2);
-      border-top: 3px solid #fff;
-      border-radius: 50%;
-      width: 26px;
-      height: 26px;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-  </style>
 
-  <!-- PENGALIHAN OTOMATIS KE WEB APP GAS -->
-  <script>
-    const URL_GAS = "https://script.google.com/macros/s/AKfycbxqLxVwSD3ad_k7WI1CfF1pT3GgsrORFHcv_IPb4WnoQm0SaeFmaFhPCGo9s9o1kHN_/exec";
-    window.location.replace(URL_GAS);
-  </script>
+    .app-logo {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 5px 0;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+    .spinner {
+      width: 30px;
+      height: 30px;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #ffd700;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .status-text {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .install-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      padding: 14px;
+      margin-top: 25px;
+      max-width: 320px;
+      font-size: 0.75rem;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-  <img src="https://lh3.googleusercontent.com/d/18BXHst1ZLjMEz3ecdW6qkV-l0JjQeO-9" alt="Logo Nurussalam" class="logo">
-  <div class="loader"></div>
-  <p style="margin-top: 15px; font-size: 13px; opacity: 0.85;">Membuka K-Mob Nurussalam...</p>
+
+  <img src="logo.png" alt="Logo Nurussalam" class="app-logo">
+  <h1 class="title">K-Mob Nurussalam</h1>
+  <div class="subtitle">Sistem Digital Terpadu Kepesantrenan</div>
+
+  <div class="spinner"></div>
+  <div class="status-text" id="txtLoading">Membuka portal aplikasi...</div>
+
+  <div class="install-box" id="boxInstall">
+    <b>📲 Pasang ke Layar Depan HP:</b><br>
+    Ketuk titik tiga <b>(⋮)</b> di pojok kanan atas Chrome, lalu pilih <b>"Tambahkan ke Layar Utama" / "Instal Aplikasi"</b>.
+  </div>
+
+  <script>
+    const URL_GAS = "https://script.google.com/macros/s/AKfycbxqLxVwSD3ad_k7WI1CfF1pT3GgsrORFHcv_IPb4WnoQm0SaeFmaFhPCGo9s9o1kHN_/exec";
+
+    // Cek apakah dibuka dari aplikasi terpasang (standalone) atau peramban biasa
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+    if (isStandalone) {
+      document.getElementById("boxInstall").style.display = "none";
+      document.getElementById("txtLoading").innerText = "Menghubungkan ke server K-Mob...";
+      setTimeout(function() {
+        window.location.replace(URL_GAS);
+      }, 700);
+    } else {
+      // Jeda 3 detik agar Chrome sempat mengunduh logo.png dan manifest
+      setTimeout(function() {
+        window.location.replace(URL_GAS);
+      }, 3000);
+    }
+  </script>
+
 </body>
 </html>
- 
